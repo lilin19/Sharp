@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+
+  <!--Author Guhao Huang  19.11.2016 -->
+   <!--this is a calculator for triangle area -->
+    <!--18.1.2017   -->
+      <!--All copyright reserved -->
+      
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Sharp Calculate</title>
+
+
+
+    <!--The core algorithm and validation -->
+<script src="Calculate2.js"></script>
+
+
+<style>
+h1{
+color:white;
+background-color:#330032;
+border-radius: 0px 0px 40px 1px;
+
+}
+h2{
+font-family:Malgun Gothic;
+
+}
+</style>
+</head>
+<body>
+
+
+  <h1>
+  This is a small tool for calculating the Area of any triangle<a href="index.html" style="float:right">Go back</a>
+  </h1>
+
+  <div style="position:absolute;left:400px; top:100px; ">
+  <p>
+   Tips:Any Triangle can be solved completedly if we know three of all its factors including length or angle or area or radius of incircle.
+   his calculator can solve any triangle's area by knowing its lengths or angles.</p><p>
+   Following is an example triangle, and you can input the factors in the order of this triangle. You may find some tiny difference of the answer in different solution, that is because of the JS float dealing, the algorithm is analog. Author:TG.
+   Please input the angles in DEGREE NOT IN radian Example:a=3,b=4,c=5, S=3*4/2=6,interesting. But how to do when a=4 , b=5, c=6</p>
+
+
+
+  
+  <!--For different condition, you need different algorithm I have choose 4 different methods and it can solve all triangles-->
+    <!--SSS problem  -->
+    <!--the output area  -->
+
+  <h3 id="fact"></h3>
+  <h3 id="S"></h3>
+<div>
+  <canvas id="gl-canvas" width="800" height="600">
+  </canvas>
+ </div>
+  </div>
+
+  <!--the input area  -->
+  <div>
+   <h2>Side-Side-Side</h2>
+a: <input id='a' type='text'>
+   <br>
+b: <input id='b' type='text'>
+   <br>
+c: <input id='c' type='text'>
+   <br>
+    <input type='submit' onclick="calculate()"  value='submit'>
+  </div>
+
+
+
+ <!--SAS problem  -->
+  <div>
+  <h2>Side-Angle-Side</h2>
+a: <input id='e' type='text' >
+  <br>
+θ: <input id='f' type='text'>
+  <br>
+c: <input id='g' type='text'>
+  <br>
+  <input type='submit' onclick="calculate1()"  value='submit'>
+  </div>
+
+
+ <!--SSA problem  -->
+  <div>
+  <h2>Side-Side-Angle</h2>
+b: <input id='h' type='text' >
+  <br>
+c: <input id='i' type='text'>
+  <br>
+θ: <input id='j' type='text'>
+  <br>
+  <input type='submit' onclick="calculate2()"  value='submit'>
+  </div>
+
+
+ <!--ASA problem  -->
+  <div>
+  <h2>Angle-Side-Angle</h2>
+θ:<input id='a1' type='text' >
+  <br>
+c:<input id='b1' type='text'>
+  <br>
+α:<input id='c1' type='text'>
+  <br>
+ <input type='submit' onclick="calculate3()"  value='submit'>
+ </div>
+
+
+
+
+</body>
+</html>

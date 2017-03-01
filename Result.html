@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<script src="Calculate2.js"></script>
+<style>
+h1{
+color:white;
+background-color:#330032;
+border-radius: 0px 0px 40px 1px;
+
+}
+h2{
+font-family:Malgun Gothic;
+
+}
+</style>
+<body>
+
+  <h1>
+  This is a small tool for calculating the Area of any triangle
+  </h1>
+
+
+  <h3 id="fact"></h3>
+  <h3 id="S"></h3>
+<a href="sharp2.html" style="float:left"><h2>Go back</h2></a>
+
+
+<script>
+//get the variable from url
+var url=location.href; 
+var tmp1=url.split("?")[1];
+var tmp2=tmp1.split("&")[0];
+
+//split all the variables if necessary
+var tmp3=tmp2.split("=")[1];
+  var tmp4=tmp3.split("+")[0];
+var tmp5=tmp2.split("=")[2];
+  var tmp6=tmp5.split("+")[0];
+ var tmp7=tmp2.split("=")[3];
+  var tmp8=tmp7.split("+")[0];
+ var tmp9=tmp2.split("=")[4];
+  var tmp10=tmp9.split("+")[0];
+  
+  
+  //this is the string of conditions
+var tmpx=tmp2.split("+")[1];
+
+
+var A=tmp6;
+var B=tmp8;
+var C=tmp10;
+var S=tmp4;
+
+document.getElementById("S").innerHTML="Congratulations, S= "+S;
+document.getElementById("fact").innerHTML=tmpx;
+</script>
+
+</body>
+</html>
